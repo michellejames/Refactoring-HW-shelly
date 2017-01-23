@@ -1,4 +1,5 @@
 // console.log("test");
+"use strict";
 
 var size = Math.round ( Math.random () * 50 );
 
