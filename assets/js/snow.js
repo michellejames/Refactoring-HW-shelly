@@ -7,6 +7,7 @@ var size = Math.round ( Math.random () * 50 );
 var createSnow = function () {
 	var snow = document.createElement( "div" );
 	document.body.appendChild( snow );
+	document.body.style.background = "black";
 
 //style snow
 	snow.style.width = size + "px";
@@ -16,7 +17,6 @@ var createSnow = function () {
 	snow.style.top = ( 0 - size ) + "px";
 	snow.style.borderRadius = "50%";
 	snow.style.background = "white";
-	document.body.style.background = "black";
 
 //variables to set snow up for movement
 	var leftCount = 0;
@@ -34,7 +34,7 @@ var createSnow = function () {
 			newLeft = left - Math.random () * 10 + 1;
 
 			if ( leftCount == movementThreshold ) {
-			rightCount = 0;
+				rightCount = 0;
 			}
 			leftCount++;
 
@@ -42,7 +42,7 @@ var createSnow = function () {
 			newLeft = left + Math.random () * 10 + 1;
 
 			if ( rightCount == movementThreshold ) {
-			leftCount = 0;
+				leftCount = 0;
 			}
 			rightCount++;
 		}
